@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Контакты службы поддержки F1 Hub, аккредитация СМИ и форма обратной связи.">
+  <title>F1 Drivers & Teams Database</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="./js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">🏁 F1 Hub</a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">База данных</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="product.html">Болид RB22</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Билеты</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" aria-current="page" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div class="section">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <a class="breadcrumbs__link" href="index.html">Главная</a>
+        <span class="breadcrumbs__current">Контакты</span>
+      </nav>
+      <h1 class="section__title">Контакты F1 Hub</h1>
+    </div>
+
+    <section class="catalog-layout">
+      <aside class="catalog-filters">
+        <h2 class="catalog-filters__title">Штаб-квартира</h2>
+        <p class="aside-info__text" style="margin-bottom: var(--space-md);">
+          <strong>Адрес:</strong> г. Москва, ул. Автомоторная, д. 1<br><br>
+          <strong>Телефон:</strong> +7 (900) 000-00-00<br><br>
+          <strong>Email:</strong> info@example.com
+        </p>
+      </aside>
+
+      <section class="catalog-products">
+        <h2 class="catalog-products__title">Обратная связь</h2>
+        
+        <form class="product-info page-form" id="contact-form" action="#" method="post">
+          <div class="order-form__field">
+            <label class="order-form__label" for="contact-name">Ваше имя</label>
+            <input class="order-form__input" id="contact-name" name="name" type="text" placeholder="Иван Иванов" required>
+          </div>
+
+          <div class="order-form__field">
+            <label class="order-form__label" for="contact-email">Контактный E-mail</label>
+            <input class="order-form__input" id="contact-email" name="email" type="email" placeholder="name@domain.ru" required>
+          </div>
+
+          <div class="order-form__field">
+            <label class="order-form__label" for="contact-reason">Цель обращения</label>
+            <select class="order-form__input" id="contact-reason" name="reason" required>
+              <option value="support">Техническая поддержка портала</option>
+              <option value="press">Аккредитация прессы на Гран-при</option>
+              <option value="commercial">Сотрудничество и реклама</option>
+            </select>
+          </div>
+
+          <div class="order-form__field page-form__wide">
+            <label class="order-form__label" for="contact-message">Текст сообщения</label>
+            <textarea class="order-form__input" id="contact-message" name="message" rows="5" placeholder="Опишите ваш запрос..." style="resize: vertical; font-family: inherit;" required></textarea>
+          </div>
+
+          <button class="button button--primary" type="submit" style="align-self: flex-start;">Отправить запрос 🏁</button>
+        </form>
+        <p id="contact-status" class="form-feedback" role="status" hidden>Форма проверена. Сообщение не отправляется на сервер.</p>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="site-footer__copy">&copy; 2026 F1 Drivers & Teams Database. Все права защищены.</p>
+  </footer>
+
+</body>
+</html>

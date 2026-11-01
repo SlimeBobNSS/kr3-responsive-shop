@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Главный портал для фанатов Формулы-1. База данных пилотов, команд и заказ билетов.">
+  <title>F1 Drivers & Teams Database</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">🏁 F1 Hub</a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item">
+            <a class="site-nav__link site-nav__link--active" aria-current="page" href="index.html">Главная</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="catalog.html">База данных</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="product.html">Болид RB22</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="order.html">Билеты</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="contacts.html">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    
+    <section class="f1-hero">
+      <h1 class="f1-hero__title">F1 Drivers & Teams Database</h1>
+      <p class="f1-hero__subtitle">Добро пожаловать на главный портал для фанатов Формулы-1. Изучайте статистику сезона 2026 и отправляйте демонстрационные заявки на ближайшие гонки.</p>
+      <a class="button button--primary" href="catalog.html">Открыть базу данных</a>
+    </section>
+
+        <section class="section" id="features">
+      <h2 class="section__title">Особенности сезона 2026</h2>
+      <ul class="advantages-list">
+        <li class="advantages-list__item">🔌 Полностью новые силовые установки с увеличенной мощностью электродвигателя до 350 кВт.</li>
+        <li class="advantages-list__item">🌱 Полный переход чемпионата на 100% экологически чистое и устойчивое синтетическое топливо.</li>
+        <li class="advantages-list__item">🎛️ Внедрение систем активной аэродинамики со сменяемыми режимами работы антикрыльев Z-mode и X-mode.</li>
+        <li class="advantages-list__item">📉 Уменьшение габаритов болидов: максимальная колёсная база по регламенту 2026 года — 3400 мм; минимальная масса определяется действующими правилами FIA.</li>
+        <li class="advantages-list__item">🛞 Изменение ширины шин Pirelli при сохранении классического 18-дюймового радиуса колесных дисков.</li>
+      </ul>
+    </section>
+
+
+               <section class="section" id="popular">
+      <h2 class="section__title">Билеты на ближайшие Гран-при</h2>
+      
+      <p class="catalog-data-note">Ближайшие этапы после Гран-при Мехико по календарю 2026 года. Наличие и цены билетов не проверяются — форма демонстрационная.</p>
+      <div class="products-grid">
+        <article class="product-card product-card--featured">
+          <h3 class="product-card__title">Гран-при Сан-Паулу</h3>
+          <p class="product-card__description">Даты: 6–8 ноября 2026 г.<br>Интерлагос, Бразилия — историческая трасса с перепадами высоты.</p>
+          <p class="product-card__price">Демонстрационная заявка на билет</p>
+          <button class="button button--primary product-card__button" type="button" data-product="Билет на Гран-при Сан-Паулу">Оставить заявку</button>
+        </article>
+
+        <article class="product-card product-card--featured">
+          <h3 class="product-card__title">Гран-при Лас-Вегаса</h3>
+          <p class="product-card__description">Даты: 19–21 ноября 2026 г.<br>Ночная городская гонка в США — скоростной этап на улицах Лас-Вегаса.</p>
+          <p class="product-card__price">Демонстрационная заявка на билет</p>
+          <button class="button button--primary product-card__button" type="button" data-product="Билет на Гран-при Лас-Вегаса">Оставить заявку</button>
+        </article>
+
+        <article class="product-card product-card--featured">
+          <h3 class="product-card__title">Гран-при Катара</h3>
+          <p class="product-card__description">Даты: 27–29 ноября 2026 г.<br>Лусаил — быстрые повороты и гонка под искусственным освещением.</p>
+          <p class="product-card__price">Демонстрационная заявка на билет</p>
+          <button class="button button--primary product-card__button" type="button" data-product="Билет на Гран-при Катара">Оставить заявку</button>
+        </article>
+      </div>
+    </section>
+
+        <aside class="aside-info">
+      <p class="aside-info__text">
+        F1 Hub — это современная информационная база данных для поклонников автоспорта. Здесь собраны актуальные технические регламенты, расписание заездов, а также статистика пилотов и команд чемпионата мира.
+      </p>
+    </aside>
+
+  </main>
+
+  <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
+    <h2 class="order-dialog__title" id="order-dialog-title">Бронирование билетов</h2>
+    <form class="order-form" id="order-form" action="#" method="post" novalidate>
+      <input id="selected-product" name="selected-item" type="hidden">
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-name">Имя</label>
+        <input class="order-form__input" id="order-name" name="name" type="text" placeholder="Ваше имя" required minlength="2">
+      </div>
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-email">E-mail</label>
+        <input class="order-form__input" id="order-email" name="email" type="email" placeholder="example@mail.ru" required>
+      </div>
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-phone">Телефон</label>
+        <input class="order-form__input" id="order-phone" name="phone" type="tel" placeholder="+7 (900) 000-00-00" required>
+      </div>
+      <div class="order-form__field form-field--checkbox">
+        <label>
+          <input id="order-agreement" name="agreement" type="checkbox" required>
+          Я согласен с условиями
+        </label>
+      </div>
+      <div class="order-form__actions">
+        <button class="button button--secondary" type="button" id="close-order-dialog">Закрыть</button>
+        <button class="button button--primary" type="submit">Отправить 🏁</button>
+      </div>
+    </form>
+  </dialog>
+
+  <p class="success-message" id="success-message" role="status" hidden>
+    Форма проверена. Это учебная заявка, данные не отправляются и бронирование не производится.
+  </p>
+
+  <footer class="site-footer">
+    <p class="site-footer__copy">&copy; 2026 F1 Drivers & Teams Database.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Учебная демонстрационная заявка на билеты этапов Формулы-1. Реального бронирования нет.">
+  <title>Заказ билетов — F1 Hub</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="./js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">🏁 F1 Hub</a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">База данных</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="product.html">Болид RB22</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" aria-current="page" href="order.html">Билеты</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div class="section">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <a class="breadcrumbs__link" href="index.html">Главная</a>
+        <span class="breadcrumbs__current">Билеты</span>
+      </nav>
+    </div>
+
+    <section class="section" style="max-width: 600px; margin: 0 auto var(--space-xl);">
+      <h1 class="section__title">Заявка на билеты F1</h1>
+      <p class="catalog-data-note">Учебная форма: не осуществляет реальное бронирование и не подтверждает наличие мест. Предстоящие этапы после Мехико по календарю на 1 ноября 2026 года.</p>
+      
+      <form class="product-info page-form" id="page-ticket-form" action="#" method="post">
+        <div class="order-form__field">
+          <label class="order-form__label" for="page-order-race">Выберите этап Гран-при</label>
+          <select class="order-form__input" id="page-order-race" name="race" required>
+            <option value="" disabled selected>Выберите предстоящий этап</option>
+            <option value="brazil">Гран-при Сан-Паулу (6–8 ноября 2026)</option>
+            <option value="las-vegas">Гран-при Лас-Вегаса (19–21 ноября 2026)</option>
+            <option value="qatar">Гран-при Катара (27–29 ноября 2026)</option>
+          </select>
+        </div>
+
+        <div class="order-form__field">
+          <label class="order-form__label" for="page-order-zone">Категория трибуны</label>
+          <select class="order-form__input" id="page-order-zone" name="zone" required>
+            <option value="grandstand">Главная трибуна (Старт/Финиш)</option>
+            <option value="zone1">Повороты 1-3 (Зона высокой скорости)</option>
+            <option value="general">Свободное размещение (Без места)</option>
+          </select>
+        </div>
+
+        <div class="order-form__field">
+          <label class="order-form__label" for="page-order-name">Имя и фамилия</label>
+          <input class="order-form__input" id="page-order-name" name="name" type="text" placeholder="Ваше имя" required>
+        </div>
+
+        <div class="order-form__field">
+          <label class="order-form__label" for="page-order-email">Электронная почта</label>
+          <input class="order-form__input" id="page-order-email" name="email" type="email" placeholder="example@mail.ru" required>
+        </div>
+
+        <div class="order-form__field form-field--checkbox">
+          <label>
+            <input type="checkbox" name="agreement" required>
+            Я подтверждаю корректность введенных данных
+          </label>
+        </div>
+
+        <button class="button button--primary" type="submit">Проверить заявку 🏎️</button>
+      </form>
+      <p id="page-ticket-status" class="form-feedback" role="status" hidden>Форма проверена. Демонстрационная заявка не отправляется на сервер.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="site-footer__copy">&copy; 2026 F1 Drivers & Teams Database. Все права защищены.</p>
+  </footer>
+
+</body>
+</html>
