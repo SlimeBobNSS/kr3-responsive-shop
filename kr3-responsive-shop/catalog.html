@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="F1 Drivers and Teams Database. Фильтрация по силовым установкам и составам команд 2026 года.">
+  <title>F1 Drivers & Teams Database</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="./js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">🏁 F1 Hub</a>
+      <button class="site-nav-toggle" type="button" aria-controls="mobile-site-nav" aria-expanded="false" aria-label="Открыть меню">
+        <span class="site-nav-toggle__icon" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="site-nav-toggle__label">Меню</span>
+      </button>
+      <nav class="site-nav" id="mobile-site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="index.html">Главная</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link site-nav__link--active" aria-current="page" href="catalog.html">База данных</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="product.html">Болид RB22</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="order.html">Билеты</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="contacts.html">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="section">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <a class="breadcrumbs__link" href="index.html">Главная</a>
+        <span class="breadcrumbs__current">База данных</span>
+      </nav>
+      <h1 class="section__title">F1 Drivers & Teams Database</h1>
+    </div>
+
+    <section class="catalog-layout">
+      <aside class="catalog-filters">
+        <h2 class="catalog-filters__title">Фильтры</h2>
+        <form class="filters-form" id="drivers-filters" action="#" method="get">
+
+          <fieldset class="filters-form__section">
+            <legend>Силовая установка</legend>
+            <label><input type="checkbox" name="pu" value="ferrari"> Ferrari</label>
+            <label><input type="checkbox" name="pu" value="mercedes"> Mercedes</label>
+            <label><input type="checkbox" name="pu" value="honda"> Honda</label>
+            <label><input type="checkbox" name="pu" value="audi"> Audi</label>
+            <label><input type="checkbox" name="pu" value="ford"> Red Bull Ford</label>
+          </fieldset>
+
+          <fieldset class="filters-form__section">
+            <legend>Статус пилота</legend>
+            <label><input type="radio" name="status" value="all" checked> Все пилоты</label>
+            <label><input type="radio" name="status" value="pro"> Основной состав</label>
+            <label><input type="radio" name="status" value="rookie"> Новичок сезона</label>
+          </fieldset>
+
+          <fieldset class="filters-form__section">
+            <legend>Сортировка</legend>
+            <label for="driver-sort">Порядок отображения</label>
+            <select class="order-form__input" name="sort" id="driver-sort">
+              <option value="points-desc">По очкам (убывание)</option>
+              <option value="name-asc">По алфавиту</option>
+              <option value="number-asc">По стартовому номеру</option>
+            </select>
+          </fieldset>
+
+          <button class="button button--primary" type="submit">Применить</button>
+        </form>
+      </aside>
+
+      <section class="catalog-products">
+        <h2 class="catalog-products__title">Пилоты чемпионата — 2026</h2>
+        <div class="products-grid" id="drivers-grid">
+          <article class="product-card driver-card" data-team="mercedes" data-pu="mercedes" data-status="pro" data-points="365" data-number="12">
+
+            <p class="driver-card__ranking">Место среди действующих пилотов: <strong>№1</strong></p>
+            <h3 class="product-card__title">Кими Антонелли</h3>
+            <p class="product-card__description">Команда: Mercedes<br>Мотор: Mercedes<br>Номер: 12</p>
+            <p class="product-card__price">Очки: 365</p>
+            <a class="button button--secondary" href="product.html">Инфо о болиде</a>
+          </article>
+
+          <article class="product-card driver-card" data-team="mercedes" data-pu="mercedes" data-status="pro" data-points="242" data-number="63">
+
+            <p class="driver-card__ranking">Место среди действующих пилотов: <strong>№2</strong></p>
+            <h3 class="product-card__title">Джордж Расселл</h3>
+            <p class="product-card__description">Команда: Mercedes<br>Мотор: Mercedes<br>Номер: 63</p>
+            <p class="product-card__price">Очки: 242</p>
+            <a class="button button--secondary" href="product.html">Инфо о болиде</a>
+          </article>
+
+          <article class="product-card driver-card" data-team="ferrari" data-pu="ferrari" data-status="pro" data-points="241" data-number="44">
+
+            <p class="driver-card__ranking">Место среди действующих пилотов: <strong>№3</strong></p>
+            <h3 class="product-card__title">Льюис Хэмилтон</h3>
+            <p class="product-card__description">Команда: Ferrari<br>Мотор: Ferrari<br>Номер: 44</p>
+            <p class="product-card__price">Очки: 241</p>
+            <a class="button button--secondary" href="product.html">Инфо о болиде</a>
+          </article>
+
+          <article class="product-card driver-card" data-team="redbull" data-pu="ford" data-status="pro" data-points="236" data-number="3">
+
+            <p class="driver-card__ranking">Место среди действующих пилотов: <strong>№4</strong></p>
+            <h3 class="product-card__title">Макс Ферстаппен</h3>
+            <p class="product-card__description">Команда: Red Bull Racing<br>Мотор: Red Bull Ford<br>Номер: 3</p>
+            <p class="product-card__price">Очки: 236</p>
+            <a class="button button--secondary" href="product.html">Инфо о болиде</a>
+          </article>
+
+          <article class="product-card driver-card" data-team="ferrari" data-pu="ferrari" data-status="pro" data-points="233" data-number="16">
+
+            <p class="driver-card__ranking">Место среди действующих пилотов: <strong>№5</strong></p>
+            <h3 class="product-card__title">Шарль Леклер</h3>
+            <p class="product-card__description">Команда: Ferrari<br>Мотор: Ferrari<br>Номер: 16</p>
+            <p class="product-card__price">Очки: 233</p>
+            <a class="button button--secondary" href="product.html">Инфо о болиде</a>
+          </article>
+
+          <article class="product-card driver-card" data-team="mclaren" data-pu="mercedes" data-status="pro" data-points="211" data-number="1">
+
+            <p class="driver-card__ranking">Место среди действующих пилотов: <strong>№6</strong></p>
+            <h3 class="product-card__title">Ландо Норрис</h3>
+            <p class="product-card__description">Команда: McLaren<br>Мотор: Mercedes<br>Номер: 1</p>
+            <p class="product-card__price">Очки: 211</p>
+            <a class="button button--secondary" href="product.html">Инфо о болиде</a>
+          </article>
+
+          <article class="product-card driver-card" data-team="mclaren" data-pu="mercedes" data-status="pro" data-points="144" data-number="81">
+
+            <p class="driver-card__ranking">Место среди действующих пилотов: <strong>№7</strong></p>
+            <h3 class="product-card__title">Оскар Пиастри</h3>
+            <p class="product-card__description">Команда: McLaren<br>Мотор: Mercedes<br>Номер: 81</p>
+            <p class="product-card__price">Очки: 144</p>
+            <a class="button button--secondary" href="product.html">Инфо о болиде</a>
+          </article>
+
+          <article class="product-card driver-card" data-team="redbull" data-pu="ford" data-status="pro" data-points="105" data-number="6">
+
+            <p class="driver-card__ranking">Место среди действующих пилотов: <strong>№8</strong></p>
+            <h3 class="product-card__title">Изак Хаджар</h3>
+            <p class="product-card__description">Команда: Red Bull Racing<br>Мотор: Red Bull Ford<br>Номер: 6</p>
+            <p class="product-card__price">Очки: 105</p>
+            <a class="button button--secondary" href="product.html">Инфо о болиде</a>
+          </article>
+
+          <article class="product-card driver-card" data-team="racingbulls" data-pu="ford" data-status="pro" data-points="77" data-number="30">
+
+            <p class="driver-card__ranking">Место среди действующих пилотов: <strong>№9</strong></p>
+            <h3 class="product-card__title">Лиам Лоусон</h3>
+            <p class="product-card__description">Команда: Racing Bulls<br>Мотор: Red Bull Ford<br>Номер: 30</p>
+            <p class="product-card__price">Очки: 77</p>
+            <a class="button button--secondary" href="product.html">Инфо о болиде</a>
+          </article>
+
+          <article class="product-card driver-card" data-team="alpine" data-pu="mercedes" data-status="pro" data-points="42" data-number="10">
+
+            <p class="driver-card__ranking">Место среди действующих пилотов: <strong>№10</strong></p>
+            <h3 class="product-card__title">Пьер Гасли</h3>
+            <p class="product-card__description">Команда: Alpine<br>Мотор: Mercedes<br>Номер: 10</p>
+            <p class="product-card__price">Очки: 42</p>
+            <a class="button button--secondary" href="product.html">Инфо о болиде</a>
+          </article>
+
+          <article class="product-card driver-card" data-team="racingbulls" data-pu="ford" data-status="rookie" data-points="38" data-number="41">
+
+            <p class="driver-card__ranking">Место среди действующих пилотов: <strong>№11</strong></p>
+            <h3 class="product-card__title">Арвид Линдблад</h3>
+            <p class="product-card__description">Команда: Racing Bulls<br>Мотор: Red Bull Ford<br>Номер: 41</p>
+            <p class="product-card__price">Очки: 38</p>
+            <a class="button button--secondary" href="product.html">Инфо о болиде</a>
+          </article>
+
+          <article class="product-card driver-card" data-team="alpine" data-pu="mercedes" data-status="pro" data-points="27" data-number="43">
+
+            <p class="driver-card__ranking">Место среди действующих пилотов: <strong>№12</strong></p>
+            <h3 class="product-card__title">Франко Колапинто</h3>
+            <p class="product-card__description">Команда: Alpine<br>Мотор: Mercedes<br>Номер: 43</p>
+            <p class="product-card__price">Очки: 27</p>
+            <a class="button button--secondary" href="product.html">Инфо о болиде</a>
+          </article>
+
+          <article class="product-card driver-card" data-team="haas" data-pu="ferrari" data-status="pro" data-points="23" data-number="87">
+
+            <p class="driver-card__ranking">Место среди действующих пилотов: <strong>№13</strong></p>
+            <h3 class="product-card__title">Оливер Берман</h3>
+            <p class="product-card__description">Команда: Haas<br>Мотор: Ferrari<br>Номер: 87</p>
+            <p class="product-card__price">Очки: 23</p>
+            <a class="button button--secondary" href="product.html">Инфо о болиде</a>
+          </article>
+
+          <article class="product-card driver-card" data-team="audi" data-pu="audi" data-status="pro" data-points="13" data-number="27">
+
+            <p class="driver-card__ranking">Место среди действующих пилотов: <strong>№14</strong></p>
+            <h3 class="product-card__title">Нико Хюлькенберг</h3>
+            <p class="product-card__description">Команда: Audi<br>Мотор: Audi<br>Номер: 27</p>
+            <p class="product-card__price">Очки: 13</p>
+            <a class="button button--secondary" href="product.html">Инфо о болиде</a>
+          </article>
+
+          <article class="product-card driver-card" data-team="audi" data-pu="audi" data-status="pro" data-points="10" data-number="5">
+
+            <p class="driver-card__ranking">Место среди действующих пилотов: <strong>№15</strong></p>
+            <h3 class="product-card__title">Габриэль Бортолето</h3>
+            <p class="product-card__description">Команда: Audi<br>Мотор: Audi<br>Номер: 5</p>
+            <p class="product-card__price">Очки: 10</p>
+            <a class="button button--secondary" href="product.html">Инфо о болиде</a>
+          </article>
+
+          <article class="product-card driver-card" data-team="haas" data-pu="ferrari" data-status="pro" data-points="7" data-number="31">
+
+            <p class="driver-card__ranking">Место среди действующих пилотов: <strong>№16</strong></p>
+            <h3 class="product-card__title">Эстебан Окон</h3>
+            <p class="product-card__description">Команда: Haas<br>Мотор: Ferrari<br>Номер: 31</p>
+            <p class="product-card__price">Очки: 7</p>
+            <a class="button button--secondary" href="product.html">Инфо о болиде</a>
+          </article>
+
+          <article class="product-card driver-card" data-team="aston" data-pu="honda" data-status="pro" data-points="7" data-number="14">
+
+            <p class="driver-card__ranking">Место среди действующих пилотов: <strong>№17</strong></p>
+            <h3 class="product-card__title">Фернандо Алонсо</h3>
+            <p class="product-card__description">Команда: Aston Martin<br>Мотор: Honda<br>Номер: 14</p>
+            <p class="product-card__price">Очки: 7</p>
+            <a class="button button--secondary" href="product.html">Инфо о болиде</a>
+          </article>
+
+          <article class="product-card driver-card" data-team="williams" data-pu="mercedes" data-status="pro" data-points="7" data-number="55">
+
+            <p class="driver-card__ranking">Место среди действующих пилотов: <strong>№18</strong></p>
+            <h3 class="product-card__title">Карлос Сайнс</h3>
+            <p class="product-card__description">Команда: Williams<br>Мотор: Mercedes<br>Номер: 55</p>
+            <p class="product-card__price">Очки: 7</p>
+            <a class="button button--secondary" href="product.html">Инфо о болиде</a>
+          </article>
+
+          <article class="product-card driver-card" data-team="williams" data-pu="mercedes" data-status="pro" data-points="5" data-number="23">
+
+            <p class="driver-card__ranking">Место среди действующих пилотов: <strong>№19</strong></p>
+            <h3 class="product-card__title">Александр Албон</h3>
+            <p class="product-card__description">Команда: Williams<br>Мотор: Mercedes<br>Номер: 23</p>
+            <p class="product-card__price">Очки: 5</p>
+            <a class="button button--secondary" href="product.html">Инфо о болиде</a>
+          </article>
+
+          <article class="product-card driver-card" data-team="aston" data-pu="honda" data-status="pro" data-points="0" data-number="18">
+
+            <p class="driver-card__ranking">Место среди действующих пилотов: <strong>№20</strong></p>
+            <h3 class="product-card__title">Лэнс Стролл</h3>
+            <p class="product-card__description">Команда: Aston Martin<br>Мотор: Honda<br>Номер: 18</p>
+            <p class="product-card__price">Очки: 0</p>
+            <a class="button button--secondary" href="product.html">Инфо о болиде</a>
+          </article>
+
+          <article class="product-card driver-card" data-team="cadillac" data-pu="ferrari" data-status="pro" data-points="0" data-number="77">
+
+            <p class="driver-card__ranking">Место среди действующих пилотов: <strong>№21</strong></p>
+            <h3 class="product-card__title">Валттери Боттас</h3>
+            <p class="product-card__description">Команда: Cadillac<br>Мотор: Ferrari<br>Номер: 77</p>
+            <p class="product-card__price">Очки: 0</p>
+            <a class="button button--secondary" href="product.html">Инфо о болиде</a>
+          </article>
+
+          <article class="product-card driver-card" data-team="cadillac" data-pu="ferrari" data-status="pro" data-points="0" data-number="11">
+
+            <p class="driver-card__ranking">Место среди действующих пилотов: <strong>№22</strong></p>
+            <h3 class="product-card__title">Серхио Перес</h3>
+            <p class="product-card__description">Команда: Cadillac<br>Мотор: Ferrari<br>Номер: 11</p>
+            <p class="product-card__price">Очки: 0</p>
+            <a class="button button--secondary" href="product.html">Инфо о болиде</a>
+          </article>
+        </div>
+        <p class="catalog-empty" id="drivers-empty" hidden>По выбранным параметрам пилоты не найдены.</p>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="site-footer__copy">&copy; 2026 F1 Drivers & Teams Database. Все права защищены.</p>
+  </footer>
+
+</body>
+</html>
+
