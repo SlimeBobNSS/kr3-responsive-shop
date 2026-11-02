@@ -1,3 +1,4 @@
+/* Адаптивные стили КР №3: Mobile First */
 :root {
   --focus-color: #ffd54a;
   --color-link-accessible: #ff9289;
@@ -70,34 +71,40 @@ main {
   width: 100%;
   padding: 14px 16px;
   display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
   gap: 12px;
-  justify-items: center;
 }
 
 .site-header__logo {
   font-size: clamp(20px, 5vw, 26px);
+  justify-self: start;
 }
 
 .site-nav {
+  display: none;
+  grid-column: 1 / -1;
   width: 100%;
   min-width: 0;
 }
 
-.site-nav__list {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 8px;
+.site-nav.is-open {
+  display: block;
 }
 
-.site-nav__item:last-child:nth-child(odd) {
-  grid-column: 1 / -1;
+.site-nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .site-nav__link {
   display: block;
-  padding: 12px 8px;
-  text-align: center;
-  font-size: 13px;
+  width: 100%;
+  min-height: 44px;
+  padding: 12px 14px;
+  text-align: left;
+  font-size: 15px;
 }
 
 .f1-hero {
@@ -171,11 +178,6 @@ main {
 .catalog-products__title {
   font-size: 22px;
   margin: 0 0 16px;
-}
-
-.catalog-result-count {
-  color: #c5c5c8;
-  margin: 0 0 14px;
 }
 
 .catalog-empty {
@@ -252,10 +254,6 @@ main {
   background: var(--color-success-bg);
 }
 
-.product-card__badge--danger {
-  background-color: #b91c1c;
-}
-
 .table-wrapper {
   max-width: 100%;
   overflow-x: auto;
@@ -321,14 +319,6 @@ main {
 }
 
 @media (min-width: 640px) {
-  .site-nav__list {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-  }
-
-  .site-nav__item:last-child:nth-child(odd) {
-    grid-column: auto;
-  }
-
   .products-grid,
   .catalog-products .products-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -389,12 +379,15 @@ main {
   }
 
   .site-nav {
+    display: block;
     width: auto;
+    grid-column: auto;
   }
 
   .site-nav__list {
-    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
+    gap: 8px;
   }
 
   .site-nav__link {
@@ -443,7 +436,6 @@ main {
   }
 }
 
-/* Responsive background image: 3 настоящих размера 480 / 800 / 1308px */
 @media (min-width: 1024px) {
   .f1-hero {
     background-image: linear-gradient(rgba(21, 21, 30, 0.4), rgba(21, 21, 30, 0.4)), url('../images/hero-bg-1308.jpg');
@@ -456,11 +448,64 @@ main {
   }
 }
 
-/* Сохранение фактической ширины и доступного пространства */
-.product-info__visual img { max-width: 100%; height: auto; }
-.order-form__field, .page-form .order-form__field { min-width: 0; }
-.page-form input, .page-form select, .page-form textarea { max-width: 100%; }
+.order-form__field,
+.page-form .order-form__field {
+  min-width: 0;
+}
 
-/* RB22: не растягиваем исходное изображение 739px до большого desktop-блока. */
-.product-info__visual picture {max-width: 620px; margin-inline: auto;}
-.product-info__visual img {display: block; width: 100%; max-width: 620px; height: auto;}
+.page-form input,
+.page-form select,
+.page-form textarea {
+  max-width: 100%;
+}
+
+.product-info__visual picture {
+  max-width: 620px;
+  margin-inline: auto;
+}
+
+.product-info__visual img {
+  display: block;
+  width: 100%;
+  max-width: 620px;
+  height: auto;
+}
+
+.site-nav-toggle {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.site-nav-toggle__icon {
+  display: grid;
+  gap: 4px;
+}
+
+.site-nav-toggle__icon span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: currentColor;
+}
+
+.site-nav-toggle:focus-visible {
+  outline: 3px solid var(--focus-color);
+  outline-offset: 3px;
+}
+
+@media (min-width: 768px) {
+  .site-nav-toggle {
+    display: none;
+  }
+}

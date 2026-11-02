@@ -15,7 +15,11 @@
   <header class="site-header">
     <div class="site-header__inner">
       <a class="site-header__logo" href="index.html">🏁 F1 Hub</a>
-      <nav class="site-nav" aria-label="Основная навигация">
+      <button class="site-nav-toggle" type="button" aria-controls="mobile-site-nav" aria-expanded="false" aria-label="Открыть меню">
+        <span class="site-nav-toggle__icon" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="site-nav-toggle__label">Меню</span>
+      </button>
+      <nav class="site-nav" id="mobile-site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
           <li class="site-nav__item">
             <a class="site-nav__link site-nav__link--active" aria-current="page" href="index.html">Главная</a>
@@ -37,8 +41,8 @@
     </div>
   </header>
 
-  <main id="main" tabindex="-1">
-    
+  <main id="main">
+
     <section class="f1-hero">
       <h1 class="f1-hero__title">F1 Drivers & Teams Database</h1>
       <p class="f1-hero__subtitle">Добро пожаловать на главный портал для фанатов Формулы-1. Изучайте статистику сезона 2026 и отправляйте демонстрационные заявки на ближайшие гонки.</p>
@@ -51,35 +55,34 @@
         <li class="advantages-list__item">🔌 Полностью новые силовые установки с увеличенной мощностью электродвигателя до 350 кВт.</li>
         <li class="advantages-list__item">🌱 Полный переход чемпионата на 100% экологически чистое и устойчивое синтетическое топливо.</li>
         <li class="advantages-list__item">🎛️ Внедрение систем активной аэродинамики со сменяемыми режимами работы антикрыльев Z-mode и X-mode.</li>
-        <li class="advantages-list__item">📉 Уменьшение габаритов болидов: максимальная колёсная база по регламенту 2026 года — 3400 мм; минимальная масса определяется действующими правилами FIA.</li>
+        <li class="advantages-list__item">📉 Уменьшение габаритов и веса болидов: колесная база сокращена до 2800 мм, а минимальный вес — до 768 кг.</li>
         <li class="advantages-list__item">🛞 Изменение ширины шин Pirelli при сохранении классического 18-дюймового радиуса колесных дисков.</li>
       </ul>
     </section>
 
-
                <section class="section" id="popular">
       <h2 class="section__title">Билеты на ближайшие Гран-при</h2>
-      
+
       <p class="catalog-data-note">Ближайшие этапы после Гран-при Мехико по календарю 2026 года. Наличие и цены билетов не проверяются — форма демонстрационная.</p>
       <div class="products-grid">
         <article class="product-card product-card--featured">
           <h3 class="product-card__title">Гран-при Сан-Паулу</h3>
           <p class="product-card__description">Даты: 6–8 ноября 2026 г.<br>Интерлагос, Бразилия — историческая трасса с перепадами высоты.</p>
-          <p class="product-card__price">Демонстрационная заявка на билет</p>
+          <p class="product-card__price">Цена от: 780 BRL ($140)</p>
           <button class="button button--primary product-card__button" type="button" data-product="Билет на Гран-при Сан-Паулу">Оставить заявку</button>
         </article>
 
         <article class="product-card product-card--featured">
           <h3 class="product-card__title">Гран-при Лас-Вегаса</h3>
           <p class="product-card__description">Даты: 19–21 ноября 2026 г.<br>Ночная городская гонка в США — скоростной этап на улицах Лас-Вегаса.</p>
-          <p class="product-card__price">Демонстрационная заявка на билет</p>
+          <p class="product-card__price">Цена от: $99</p>
           <button class="button button--primary product-card__button" type="button" data-product="Билет на Гран-при Лас-Вегаса">Оставить заявку</button>
         </article>
 
         <article class="product-card product-card--featured">
           <h3 class="product-card__title">Гран-при Катара</h3>
           <p class="product-card__description">Даты: 27–29 ноября 2026 г.<br>Лусаил — быстрые повороты и гонка под искусственным освещением.</p>
-          <p class="product-card__price">Демонстрационная заявка на билет</p>
+          <p class="product-card__price">Цена от: 730 QAR ($200)</p>
           <button class="button button--primary product-card__button" type="button" data-product="Билет на Гран-при Катара">Оставить заявку</button>
         </article>
       </div>

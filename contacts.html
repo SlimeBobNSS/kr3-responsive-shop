@@ -15,7 +15,11 @@
   <header class="site-header">
     <div class="site-header__inner">
       <a class="site-header__logo" href="index.html">🏁 F1 Hub</a>
-      <nav class="site-nav" aria-label="Основная навигация">
+      <button class="site-nav-toggle" type="button" aria-controls="mobile-site-nav" aria-expanded="false" aria-label="Открыть меню">
+        <span class="site-nav-toggle__icon" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="site-nav-toggle__label">Меню</span>
+      </button>
+      <nav class="site-nav" id="mobile-site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
           <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">База данных</a></li>
@@ -27,7 +31,7 @@
     </div>
   </header>
 
-  <main id="main" tabindex="-1">
+  <main id="main">
     <div class="section">
       <nav class="breadcrumbs" aria-label="Хлебные крошки">
         <a class="breadcrumbs__link" href="index.html">Главная</a>
@@ -48,7 +52,7 @@
 
       <section class="catalog-products">
         <h2 class="catalog-products__title">Обратная связь</h2>
-        
+
         <form class="product-info page-form" id="contact-form" action="#" method="post">
           <div class="order-form__field">
             <label class="order-form__label" for="contact-name">Ваше имя</label>

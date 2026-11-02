@@ -55,8 +55,6 @@ if (orderForm) {
   });
 }
 
-
-
 const driversFilters = document.getElementById('drivers-filters');
 if (driversFilters) {
   const driversGrid = document.getElementById('drivers-grid');
@@ -109,4 +107,35 @@ for (const [formId, statusId] of [
   });
   form.addEventListener('input', () => { status.hidden = true; });
   form.addEventListener('change', () => { status.hidden = true; });
+}
+const navToggle = document.querySelector('.site-nav-toggle');
+const mobileNav = document.getElementById('mobile-site-nav');
+if (navToggle && mobileNav) {
+  const closeMobileNav = (restoreFocus = false) => {
+    mobileNav.classList.remove('is-open');
+    navToggle.setAttribute('aria-expanded', 'false');
+    navToggle.setAttribute('aria-label', 'Открыть меню');
+    if (restoreFocus) navToggle.focus();
+  };
+  navToggle.addEventListener('click', () => {
+    const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+    if (expanded) {
+      closeMobileNav();
+    } else {
+      mobileNav.classList.add('is-open');
+      navToggle.setAttribute('aria-expanded', 'true');
+      navToggle.setAttribute('aria-label', 'Закрыть меню');
+    }
+  });
+  mobileNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => closeMobileNav());
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && mobileNav.classList.contains('is-open')) {
+      closeMobileNav(true);
+    }
+  });
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 768) closeMobileNav();
+  });
 }
