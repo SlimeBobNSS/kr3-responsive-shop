@@ -7,7 +7,7 @@
 Многостраничный учебный сайт о Формуле-1 на основе HTML/CSS-проекта КР №1. **Bootstrap не используется.** Формы демонстрационные, данные на сервер не отправляются.
 
 **Репозиторий:** https://github.com/SlimeBobNSS/kr3-responsive-shop  
-**GitHub Pages:** https://slimebobnss.github.io/kr3-responsive-shop/ (ссылку нужно проверить после обновления файлов)
+**GitHub Pages:** https://slimebobnss.github.io/kr3-responsive-shop/
 
 ## Структура проекта
 
